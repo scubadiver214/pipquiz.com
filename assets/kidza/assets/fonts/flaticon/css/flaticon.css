@@ -1,0 +1,169 @@
+@font-face {
+    font-family: "Flaticon";
+    src: url("../fonts/flaticon.eot");
+    src: url("../fonts/flaticon.eot?#iefix") format("embedded-opentype"),
+         url("../fonts/flaticon.woff2") format("woff2"),
+         url("../fonts/flaticon.woff") format("woff"),
+         url("../fonts/flaticon.ttf") format("truetype"),
+         url("../fonts/flaticon.svg#flaticon") format("svg");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @media screen and (-webkit-min-device-pixel-ratio:0) {
+    @font-face {
+      font-family: "Flaticon";
+      src: url("../fonts/flaticon.svg#Flaticon") format("svg");
+    }
+  }
+  
+  [class^="flaticon-"], [class*=" flaticon-"] {
+      display: inline-flex;
+  }
+  
+  [class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+  [class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+    font-family: Flaticon;
+    font-size: inherit;
+    font-style: normal;
+    font-weight: normal;
+  }
+.flaticon-arrow-right:before {
+    content: "\f101";
+}
+.flaticon-right-arrow:before {
+    content: "\f102";
+}
+.flaticon-search:before {
+    content: "\f103";
+}
+.flaticon-quest-down:before {
+    content: "\f104";
+}
+.flaticon-start:before {
+    content: "\f105";
+}
+.flaticon-cart:before {
+    content: "\f106";
+}
+.flaticon-pin-map:before {
+    content: "\f107";
+}
+.flaticon-telephone:before {
+    content: "\f108";
+}
+.flaticon-mail:before {
+    content: "\f109";
+}
+.flaticon-chevron-down:before {
+    content: "\f10a";
+}
+.flaticon-circle-line:before {
+    content: "\f10b";
+}
+.flaticon-share:before {
+    content: "\f10c";
+}
+.flaticon-user:before {
+    content: "\f10d";
+}
+.flaticon-maternity:before {
+    content: "\f10e";
+}
+.flaticon-quest-small:before {
+    content: "\f10f";
+}
+.flaticon-phone-big:before {
+    content: "\f110";
+}
+.flaticon-instructor:before {
+    content: "\f111";
+}
+.flaticon-teacher:before {
+    content: "\f112";
+}
+.flaticon-bricks:before {
+    content: "\f113";
+}
+.flaticon-clock:before {
+    content: "\f114";
+}
+.flaticon-chat-and-tel:before {
+    content: "\f115";
+}
+.flaticon-arow-check:before {
+    content: "\f116";
+}
+.flaticon-arrow-top:before {
+    content: "\f117";
+}
+.flaticon-check-circle:before {
+    content: "\f118";
+}
+.flaticon-telegram-big:before {
+    content: "\f119";
+}
+.flaticon-tag:before {
+    content: "\f11a";
+}
+.flaticon-play-lesson:before {
+    content: "\f11b";
+}
+.flaticon-wave-column:before {
+    content: "\f11c";
+}
+.flaticon-mail-open:before {
+    content: "\f11d";
+}
+.flaticon-language:before {
+    content: "\f11e";
+}
+.flaticon-certifications:before {
+    content: "\f11f";
+}
+.flaticon-double-user:before {
+    content: "\f120";
+}
+.flaticon-online-class:before {
+    content: "\f121";
+}
+.flaticon-expertise:before {
+    content: "\f122";
+}
+.flaticon-user-experience:before {
+    content: "\f123";
+}
+.flaticon-lessons:before {
+    content: "\f124";
+}
+.flaticon-left-quote-sketch:before {
+    content: "\f125";
+}
+.flaticon-boy:before {
+    content: "\f126";
+}
+.flaticon-double-arrow-right:before {
+    content: "\f127";
+}
+.flaticon-hand:before {
+    content: "\f128";
+}
+.flaticon-places-to-visit:before {
+    content: "\f129";
+}
+.flaticon-business-card:before {
+    content: "\f12a";
+}
+.flaticon-graduated:before {
+    content: "\f12b";
+}
+.flaticon-right-drawn-arrow:before {
+    content: "\f12c";
+}
+.flaticon-calendar:before {
+    content: "\f12d";
+}
+.flaticon-location2:before {
+    content: "\f12e";
+}
+

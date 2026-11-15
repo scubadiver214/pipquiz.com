@@ -1,0 +1,110 @@
+.pxl-mailchimp {
+	.input-wrapper {
+		position: unset;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border: 1px solid;
+		padding: 0 12px;
+
+		input {
+			border: unset !important;
+			margin: 0 !important;
+		}
+
+		svg {
+			position: unset !important;
+			transform: translate(0) !important;	
+		}
+	}
+
+	.mailchimp-submit {
+		.pxl-mailchimp-btn {
+			padding: 15px;
+			width: 100%;
+			align-items: center;
+			display: flex;
+			justify-content: center;
+		}
+	}
+
+	&.style-flex {
+		.pxl-mailchimp {
+			display: flex;
+			justify-content: space-between;
+
+			@media (max-width: 768px) {
+				display: inline;
+			}
+			.input-wrapper{
+				@media (max-width: 1028px) {
+					width: 100% !important;
+				}
+			}
+			.mailchimp-submit{
+				@media (max-width: 1028px) {
+					margin-left: 20px;
+				}
+				@media (max-width: 768px) {
+					margin-left: 0;
+					width: 100% !important;
+				}
+				.pxl-mailchimp-btn{
+					@media (max-width: 768px) {
+						margin-top: 20px;
+						width: 100% !important;
+					}
+				}
+			}
+		}
+
+
+	}
+
+	&.style-flex2 {
+		background-color: #fff !important;
+		padding: 10px;
+
+		.pxl-mailchimp {
+			display: flex;
+			justify-content: space-between;
+
+			// @media (max-width: 768px) {
+			// 	display: inline-block;
+			// }
+
+			.input-wrapper {
+				border: 1px solid rgba(255, 255, 255, 0);
+				display: flex;
+				flex-direction: row-reverse;
+			}
+		}
+	}
+
+	&.style-btn-border {
+		.mailchimp-submit {
+			.pxl-mailchimp-btn {
+				border: 1px solid rgba(255, 255, 255, 0.10);
+			}
+		}
+	}
+}
+
+body.rtl {
+
+	.pxl-mailchimp.style-icon [type="submit"],
+	.pxl-mailchimp.style-icon .mc4wp-submit-icon {
+		right: auto;
+		left: 8px;
+	}
+
+	.pxl-mailchimp.style-icon .mc4wp-submit-icon {
+		transform: translateY(-50%) scaleX(-1);
+	}
+
+	.pxl-mailchimp.style-icon2 [type="submit"],
+	.pxl-mailchimp.style-icon2 .mc4wp-submit-icon {
+		right: auto;
+		left: 0;
+	}
+}

@@ -1,0 +1,99 @@
+.pxl-tabs {
+    .pxl-tab--title {
+        cursor: pointer;
+        @include transition(all 250ms linear 0ms);
+
+    }
+
+    .pxl-tabs--title {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 45px;
+        align-items: center;
+        gap: 20px;
+        .pxl-item--title {
+            &:first-child{
+                order: 1;
+            }
+            &:nth-child(2){
+                order: 3;
+            }
+            cursor: pointer;
+        }
+    }
+
+    .pxl-switch {
+        order: 2;
+        width: 77px;
+        height: 34px;
+        border: 1px solid $primary_color;
+        border-radius: 40px;
+        position: relative;
+        transition: all;
+        border-color: $primary-color;
+
+        &.active {
+            &::before {
+                background: #F1663E;
+                left: 45px;
+            }
+            border-color: #F1663E;
+        }
+
+        &::before {
+            position: absolute;
+            content: '';
+            top: 50%;
+            transform: translateY(-50%);
+            left: 5px;
+            transition: all .3s ease;
+            width: 24px;
+            height: 24px;
+            background: $primary-color;
+            border-radius: 50%;
+            
+        }
+
+    }
+
+    .pxl-tab--content {
+        display: none;
+        width: 100%;
+    }
+
+    .elementor-section.elementor-section-stretched {
+        width: auto !important;
+        left: 0 !important;
+    }
+
+    .pxl-tabs--elementor>.elementor {
+        margin: 0 -15px;
+    }
+
+    &.tab-effect-fade {
+        .pxl-tab--content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100% !important;
+            display: block !important;
+            opacity: 0 !important;
+            visibility: hidden;
+            @include transition(all .25s cubic-bezier(.645, .045, .355, 1));
+
+            &.active {
+                position: static;
+                opacity: 1 !important;
+                visibility: visible;
+            }
+        }
+
+        .pxl-tabs--content {
+            position: relative;
+        }
+    }
+
+
+}

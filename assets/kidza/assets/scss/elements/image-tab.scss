@@ -1,0 +1,105 @@
+.pxl-image-tab {
+    display: flex;
+    justify-content: space-between;
+    margin-left: -70px;
+    margin-right: -70px;
+    @media screen and(max-width: 1200px){
+        display: inline-block;
+    }
+    .pxl-container {
+        padding: 0 50px;
+        transition: all .3s ease;
+        cursor: pointer;
+        position: relative;
+        flex: 4;
+        @media screen and(max-width: 1200px){
+            display: flex;
+            padding: 0;
+        }
+        .pxl-image {
+            height: 100%;
+
+            img {
+                height: 100%;
+                width: revert-layer;
+                max-width: unset;
+            }
+        }
+
+        .pxl-icon {
+            i {
+                line-height: 1;
+            }
+        }
+
+        .pxl-title,
+        .pxl-content,
+        .pxl-icon {
+            opacity: 0;
+            @media screen and (max-width: 1200px){
+                opacity: 1;
+            }
+        }
+
+        .pxl-item-right {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 50%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            background: #fff;
+            padding: 50px 0 50px 50px;
+            opacity: 0;
+            transition: all .3s linear;
+            transform: translateX(100px);
+            @media screen and (max-width: 1200px){
+                padding: 30px;
+                position: unset;
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        &.active {
+            margin-left: -70px;
+            margin-right: 100px;
+            flex: 6;
+            .pxl-item-right {
+                opacity: 1;
+                transform: translatex(0);
+            }
+            @media screen and (max-width: 1200px){
+                margin: 0;
+            }
+            .pxl-title,
+            .pxl-content,
+            .pxl-icon {
+                opacity: 1;
+                animation-name: fadeInUp;
+                -webkit-animation-name: fadeInUp;
+                -webkit-animation-fill-mode: both;
+                animation-fill-mode: both;
+                animation-duration: .5s;
+                -webkit-animation-duration: .5s;
+            }
+
+            .pxl-icon {
+                animation-delay: 0.4s;
+                -webkit-animation-delay: 0.4s;
+            }
+
+            .pxl-title {
+                animation-delay: 0.5s;
+                -webkit-animation-delay: 0.5s;
+            }
+
+            .pxl-content {
+                animation-delay: 0.6s;
+                -webkit-animation-delay: 0.6s;
+            }
+
+        }
+    }
+}

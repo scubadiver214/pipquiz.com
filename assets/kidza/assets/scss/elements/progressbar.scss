@@ -1,0 +1,73 @@
+.pxl--progressbar {
+    @include transition(width 1.4s ease);
+    width: 0;
+
+    &.vertical {
+        @include transition(height 1.4s ease);
+        height: 0;
+    }
+}
+
+.pxl-progressbar-1 {
+    .pxl--item {
+        +.pxl--item {
+            margin-top: 31px;
+        }
+
+        .pxl--meta {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+        }
+
+        .pxl--title,
+        .pxl--percentage {
+            font-size: 18px;
+            color: #1f262a;
+            margin: 5px 0;
+        }
+
+        .pxl--holder {
+            position: relative;
+            background-color: #bec4c8;
+            border-radius: 4px;
+            height: 5px;
+        }
+
+        .pxl-item-border {
+            padding: 4px;
+            border: 1px dashed;
+            border-radius: 14px;
+        }
+
+        .pxl--progressbar {
+            position: relative;
+            width: 0;
+            height: 5px;
+            background-color: #1f262a;
+            z-index: 1;
+            @include transition(width 1.4s ease);
+            border-radius: 4px
+        }
+
+        .pxl--background {
+            @extend .pxl-bg-e6-2e;
+            @extend .pxl-spill;
+        }
+    }
+}
+
+body.rtl {
+    .pxl-progressbar-1 .pxl--percentage {
+        right: auto;
+        left: 0;
+    }
+}

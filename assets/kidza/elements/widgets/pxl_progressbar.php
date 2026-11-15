@@ -1,0 +1,161 @@
+<?php
+pxl_add_custom_widget(
+    array(
+        'name' => 'pxl_progressbar',
+        'title' => esc_html__( 'Case Progress Bar', 'kidza' ),
+        'icon' => 'eicon-skill-bar',
+        'categories' => array('pxltheme-core'),
+        'scripts' => array(
+            'pxl-progressbar',
+            'kidza-progressbar',
+        ),
+        'params' => array(
+            'sections' => array(
+                array(
+                    'name' => 'tab_layout',
+                    'label' => esc_html__('Layout', 'kidza' ),
+                    'tab' => \Elementor\Controls_Manager::TAB_LAYOUT,
+                    'controls' => array(
+                        array(
+                            'name' => 'layout',
+                            'label' => esc_html__('Templates', 'kidza' ),
+                            'type' => 'layoutcontrol',
+                            'default' => '1',
+                            'options' => [
+                                '1' => [
+                                    'label' => esc_html__('Layout 1', 'kidza' ),
+                                    'image' => get_template_directory_uri() . '/elements/widgets/img-layout/pxl_progressbar/layout1.jpg'
+                                ],
+                            ],
+                        ),
+                    ),
+                ),
+                array(
+                    'name' => 'tab_content',
+                    'label' => esc_html__( 'Content', 'kidza' ),
+                    'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
+                    'controls' => array(
+                        array(
+                            'name' => 'progressbar',
+                            'label' => esc_html__( 'Progress Bar', 'kidza' ),
+                            'type' => \Elementor\Controls_Manager::REPEATER,
+                            'controls' => array(
+                                array(
+                                    'name' => 'title',
+                                    'label' => esc_html__( 'Title', 'kidza' ),
+                                    'type' => \Elementor\Controls_Manager::TEXT,
+                                    'label_block' => true,
+                                ),
+                                array(
+                                    'name' => 'percent',
+                                    'label' => esc_html__( 'Percentage', 'kidza' ),
+                                    'type' => \Elementor\Controls_Manager::SLIDER,
+                                    'default' => [
+                                        'size' => 50,
+                                        'unit' => '%',
+                                    ],
+                                    'label_block' => true,
+                                ),
+                            ),
+                            'title_field' => '{{{ title }}}',
+                        ),
+                        
+                        array(
+                            'name' => 'item_space',
+                            'label' => esc_html__('Item Spacer', 'kidza' ),
+                            'type' => \Elementor\Controls_Manager::SLIDER,
+                            'control_type' => 'responsive',
+                            'size_units' => [ 'px' ],
+                            'range' => [
+                                'px' => [
+                                    'min' => 0,
+                                    'max' => 300,
+                                ],
+                            ],
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-progressbar .pxl--item + .pxl--item' => 'margin-top: {{SIZE}}{{UNIT}};',
+                            ],
+                        ),
+                    ),
+                ),
+                array(
+                    'name' => 'tab_style_title',
+                    'label' => esc_html__( 'Title', 'kidza' ),
+                    'tab' => \Elementor\Controls_Manager::TAB_STYLE,
+                    'controls' => array(
+                        array(
+                            'name' => 'title_color',
+                            'label' => esc_html__( 'Title Color', 'kidza' ),
+                            'type' => \Elementor\Controls_Manager::COLOR,
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-progressbar .pxl--title' => 'color: {{VALUE}};',
+                            ],
+                        ),
+                        array(
+                            'name' => 'title_typography',
+                            'label' => esc_html__( 'Title Typography', 'kidza' ),
+                            'type' => \Elementor\Group_Control_Typography::get_type(),
+                            'control_type' => 'group',
+                            'selector' => '{{WRAPPER}}  .pxl-progressbar .pxl--title',
+                        ),
+                    ),
+                ),
+                array(
+                    'name' => 'tab_style_percentage',
+                    'label' => esc_html__( 'Percentage', 'kidza' ),
+                    'tab' => \Elementor\Controls_Manager::TAB_STYLE,
+                    'controls' => array(
+                        array(
+                            'name' => 'percentage_color',
+                            'label' => esc_html__( 'Percentage Color', 'kidza' ),
+                            'type' => \Elementor\Controls_Manager::COLOR,
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-progressbar .pxl--percentage' => 'color: {{VALUE}};',
+                            ],
+                        ),
+                        array(
+                            'name' => 'percentage_typography',
+                            'label' => esc_html__( 'Percentage Typography', 'kidza' ),
+                            'type' => \Elementor\Group_Control_Typography::get_type(),
+                            'control_type' => 'group',
+                            'selector' => '{{WRAPPER}} .pxl-progressbar .pxl--percentage',
+                        ),
+                        array(
+                            'name' => 'border_color',
+                            'label' => esc_html__( 'Border Color', 'kidza' ),
+                            'type' => \Elementor\Controls_Manager::COLOR,
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-progressbar .pxl-item-border' => 'border-color: {{VALUE}};',
+                            ],
+                        ),
+                    ),
+                ),
+                array(
+                    'name' => 'tab_style_bar',
+                    'label' => esc_html__( 'Bar', 'kidza' ),
+                    'tab' => \Elementor\Controls_Manager::TAB_STYLE,
+                    'controls' => array(
+                        array(
+                            'name' => 'bar_color',
+                            'label' => esc_html__( 'Bar Color', 'kidza' ),
+                            'type' => \Elementor\Controls_Manager::COLOR,
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-progressbar .pxl--progressbar' => 'background: {{VALUE}};',
+                            ],
+                        ),
+                        array(
+                            'name' => 'bar_bg_color',
+                            'label' => esc_html__( 'Bar Background Color', 'kidza' ),
+                            'type' => \Elementor\Controls_Manager::COLOR,
+                            'selectors' => [
+                                '{{WRAPPER}} .pxl-progressbar .pxl--holder' => 'background: {{VALUE}};',
+                            ],
+                        ),
+                    ),
+                ),
+                kidza_widget_animation_settings(),
+            ),
+        ),
+    ),
+    kidza_get_class_widget_path()
+);
